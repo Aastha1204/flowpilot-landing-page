@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowPilot - Autonomous AI Agents for Business</title>
+
+  <!-- Google Font (external service #1 — not counted in the 2 required, just styling) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) library CSS — EXTERNAL LIBRARY #1 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="logo">🛸 FlowPilot</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <!-- Theme toggle button — simple interactive element, no library needed -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text" data-aos="fade-right">
+        <span class="badge">AUTONOMOUS AI AGENTS </span>
+        <span class="badge">FOR BUSINESS</span>
+        <h1>Great AI, <span class="highlight">delivered</span> to your business.</h1>
+        <p>
+          FlowPilot creates autonomous AI agents for businesses, helping them streamline operations and boost productivity.
+        </p>
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn btn-primary">Get Started</a>
+          <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+          <a href="#contact" class="btn btn-secondary-outline">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="hero-image" data-aos="fade-left">
+        <div class="smooth-plane">🛸</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Why you'll love FlowPilot</h2>
+      <p class="section-subtitle" data-aos="fade-up">Everything a business needs to leverage the power of AI.</p>
+
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon">🌱</div>
+          <h3>Emails Triage</h3>
+          <p>Agents read every inbound message, sort what's urgent, and draft replies for anything routine — you approve, they send.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">🚚</div>
+          <h3>Smart Reminders</h3>
+          <p>Agents nudge you before deadline slips, not after.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">🎯</div>
+          <h3>Meeting scheduling</h3>
+          <p>Agents negotiate timeslots across calendars and time zones, and rebook automatically the moment a conflict shows up.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">🔄</div>
+          <h3>Follow-up drafting</h3>
+          <p>Nothing slips through. Agents track open threads and draft the follow-up before you've noticed it went quiet.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">🔄</div>
+          <h3>Custom workflows</h3>
+          <p>Describe a repetitive process once. Agents pick it up, run it every time it recurs, and flag anything unusual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">How it works</h2>
+      <p class="section-subtitle" data-aos="fade-up">Three simple steps to get your AI agents running.</p>
+
+      <div class="steps">
+        <div class="step" data-aos="zoom-in">
+          <div class="step-number">1</div>
+          <h3>Connect your tools</h3>
+          <p>Link your inbox and calendar. FlowPilot reads context, it never needs a spec document.</p>
+        </div>
+        <div class="step" data-aos="zoom-in" data-aos-delay="150">
+          <div class="step-number">2</div>
+          <h3>Define what to automate</h3>
+          <p>Point agents at the repetitive parts of your week in plain language — no workflow builder to learn.</p>
+        </div>
+        <div class="step" data-aos="zoom-in" data-aos-delay="300">
+          <div class="step-number">3</div>
+          <h3>Agents take it from there</h3>
+          <p>They run in the background, ask when unsure, and get quieter as they learn your judgment calls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Simple, per seat</h2>
+      <p class="section-subtitle" data-aos="fade-up">Pricing that scales with your team.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card" data-aos="fade-up">
+          <h3>Starter</h3>
+          <div class="price">₹399<span>/month</span></div>
+          <div class="description">For solo founders testing the waters.</div>
+          <ul>
+            <li>1 connected inbox</li>
+            <li>Email triage only</li>
+            <li>Community support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Choose Plan</a>
+        </div>
+
+        <div class="price-card featured" data-aos="fade-up" data-aos-delay="150">
+          <span class="badge-popular">Most Popular</span>
+          <h3>Team</h3>
+          <div class="price">₹1,499<span>/month</span></div>
+          <div class="description">For teams of 5-50 automating daily busywork.</div>
+          <ul>
+            <li>Unlimited inboxes & calendars</li>
+            <li>All agent skills</li>
+            <li>Custom workflows</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Plan</a>
+        </div>
+
+        <div class="price-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Scale</h3>
+          <div class="price">Custom</div>
+          <div class="description">For orgs needing SSO, audit logs, and dedicated support.</div>
+          <ul>
+            <li>Everything in Team</li>
+            <li>SSO & audit trail</li>
+            <li>Dedicated onboarding</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Teams running on autopilot</h2>
+      <p class="section-subtitle" data-aos="fade-up">Early access</p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card" data-aos="fade-up">
+          <p>"We stopped hiring for inbox management. The agents handle triage better than our last two hires combined."</p>
+          <h4>— Ops lead, seed-stage fintech</h4>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+          <p>"Scheduling used to eat an hour a day. Now it's a Slack notification I glance at once."</p>
+          <h4>— Founder, 12-person design studio</h4>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <p>"The follow-up drafts sound like us, not like a bot. That's the part that actually sold the team."</p>
+          <h4>— Head of Sales, B2B SaaS</h4>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="350">
+          <p>"Setup took ten minutes, ROI took a week."</p>
+          <h4>— COO, logistics startup</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT FORM ===================== -->
+  <section id="contact" class="contact">
+    <div class="container contact-inner">
+      <div data-aos="fade-right">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-subtitle">
+          Questions about a plan? Send us a message and we'll get back to you.
+        </p>
+      </div>
+
+      <form id="contactForm" class="contact-form" data-aos="fade-left">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 FlowPilot. A fictional product, built as an assignment demo.</p>
+    </div>
+  </footer>
+
+  <!-- AOS library JS — EXTERNAL LIBRARY #1 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- EmailJS library — EXTERNAL LIBRARY #2 (used in script.js to send the contact form) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
