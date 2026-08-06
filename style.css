@@ -1,5 +1,5 @@
 /* ==========================================================
-   BrewBox Landing Page — Styles
+   FlowPilot Landing Page — Styles
    Tip for interview: everything themeable lives in :root as
    CSS variables. Dark mode just swaps these variables.
    ========================================================== */
@@ -77,7 +77,7 @@ ul {
 }
 /* Here i can change the button animation affect (hover) by adding scale */
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px);   
 }
 
 .btn-primary {
