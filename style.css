@@ -1,15 +1,16 @@
 /* ==========================================================
-   FlowPilot Landing Page — Styles
+   BrewBox Landing Page — Styles
    Tip for interview: everything themeable lives in :root as
    CSS variables. Dark mode just swaps these variables.
    ========================================================== */
 
+   /* here /i can change the colour of primary for dark andlight mode , if i change radius then it would change the whole page  */
 :root {
   --bg: #fdf9f4;
   --bg-alt: #ffffff;
   --text: #2b1a12;
   --text-muted: #6b5c53;
-  --primary: #8b5e3c;
+  --primary: #8b5e3c;  
   --primary-dark: #6f4a2e;
   --accent: #e7c9a9;
   --border: #eee0d3;
@@ -74,7 +75,7 @@ ul {
   border: 2px solid transparent;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
-
+/* Here i can change the button animation affect (hover) by adding scale */
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -193,7 +194,7 @@ ul {
   font-weight: 600;
   margin-bottom: 16px;
 }
-
+/* Here i can change the heading text size */
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -202,7 +203,7 @@ ul {
 .highlight {
   color: var(--primary);
 }
-
+/* Here i can change the paragraph text size */
 .hero-text p {
   color: var(--text-muted);
   font-size: 1.1rem;
@@ -222,7 +223,7 @@ ul {
   justify-content: center;
 }
 
-.smooth-plane {
+.Smooth-Plane {
   font-size: 14rem;
   animation: float 4s ease-in-out infinite;
 }
@@ -462,7 +463,7 @@ section {
   .price-card.featured { transform: none; }
   .contact-inner { flex-direction: column; }
 }
-
+/* here i can change the structure of how the elements are arranged on smaller screens */
 @media (max-width: 700px) {
   .nav-links {
     position: absolute;
@@ -499,7 +500,7 @@ section {
     justify-content: center;
   }
 
-  .smooth-plane {
+  .coffee-cup {
     font-size: 7rem;
   }
 

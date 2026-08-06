@@ -1,7 +1,6 @@
-# FlowPilot — Landing Page (Interview Assignment)
+#  — Landing Page (Interview Assignment)
 
-A landing page for a fictional AI-agent product called **FlowPilot** — autonomous
-agents that handle email triage, meeting scheduling, and follow-ups for busy teams.
+A landing page for a fictional coffee-subscription brand called **BrewBox**.
 Built with plain **HTML, CSS, and JavaScript** — no framework, no build step —
 so every line is easy to read and explain in an interview.
 
@@ -9,19 +8,18 @@ so every line is easy to read and explain in an interview.
 
 | File | What it does |
 |---|---|
-| `index.html` | Page structure — navbar, hero, features, how-it-works, pricing, testimonials, contact form, footer |
+| `index.html` | Page structure — navbar, hero, features, pricing, testimonials, contact form, footer |
 | `style.css` | All styling. Uses CSS variables (`:root`) so dark mode is just swapping variable values |
-| `script.js` | All behavior — scroll animations, theme toggle, mobile menu, contact form |
+| `script.js` | All behavior — animations, theme toggle, mobile menu, contact form |
 
 ## How to run it locally
 
 No installation needed — it's plain HTML/CSS/JS.
 
-1. Open this folder.
+1. Open the `BrewBox-Landing-Page` folder.
 2. Double-click `index.html` to open it in your browser.
 
-Or, for a proper local server (recommended, avoids some browser quirks — and
-gives auto-refresh on save if you use VS Code's "Live Server" extension):
+Or, for a proper local server (recommended, avoids some browser quirks):
 
 ```bash
 npx serve .
@@ -32,17 +30,14 @@ npx serve .
 1. **AOS – Animate On Scroll** (`https://unpkg.com/aos@2.3.1`)
    Adds the fade/zoom-in animations you see as you scroll. Loaded via CDN in
    `index.html`, initialized with `AOS.init()` in `script.js`. Elements get
-   animated by adding a `data-aos="fade-up"` (or `zoom-in`) attribute — no
-   extra JS needed per element.
+   animated by adding a `data-aos="fade-up"` attribute — no extra code needed
+   per element.
 
 2. **EmailJS** (`@emailjs/browser`)
    Sends the contact form as a real email without a backend server. Loaded
    via CDN, wired up in `script.js`. To make it actually send emails:
    - Create a free account at [emailjs.com](https://www.emailjs.com)
    - Create an Email Service + Email Template
-   - Your template must use `{{name}}`, `{{email}}`, `{{message}}` as the
-     placeholder variables — these match the form's `<input name="...">`
-     attributes, which is how EmailJS knows what to fill in
    - Copy your Public Key, Service ID, and Template ID into the 3
      placeholders at the top of the "EmailJS contact form" section in
      `script.js`
@@ -65,10 +60,9 @@ example to mention for the "interactive elements" requirement.
 - **Code structure**: 3 separate files by responsibility (structure / style /
   behavior), CSS variables for theming instead of hardcoded colors, comments
   in `script.js` explaining each block.
-- **AI-assisted development**: you can honestly say you used Claude to
-  scaffold the page fast, then reviewed, edited, and fixed bugs in every
-  section yourself — walk through `script.js` line by line as proof you
-  understand it, and be ready to make a small live tweak if asked.
+- **AI-assisted development**: you can honestly say you used Claude Code to
+  scaffold the page fast, then you reviewed and understood every section —
+  walk through `script.js` line by line as proof you understand it.
 
 ## Deploying (pick one — all free)
 
@@ -86,7 +80,7 @@ Drag and drop the whole folder onto [app.netlify.com/drop](https://app.netlify.c
 ```bash
 git init
 git add .
-git commit -m "FlowPilot landing page"
+git commit -m "BrewBox landing page"
 git branch -M main
 git remote add origin <your-new-github-repo-url>
 git push -u origin main
@@ -97,7 +91,6 @@ Then in the repo: Settings → Pages → Deploy from branch `main` / root.
 
 - [ ] Push this folder to a **new** GitHub repo (keep it separate from any
       other project)
-- [ ] Add your real EmailJS keys so the contact form actually sends
 - [ ] Deploy it (Vercel/Netlify/GitHub Pages) and copy the live URL
 - [ ] Re-read `script.js` top to bottom once more before the interview so
       you can explain every function without looking
