@@ -1,5 +1,5 @@
 /* ==========================================================
-   FlowPilot Landing Page — JavaScript
+   BrewBox Landing Page — JavaScript
    3 things happen here:
    1. AOS library init            -> scroll animations
    2. Theme toggle (dark/light)   -> interactive element
@@ -10,14 +10,14 @@
 // AOS reads the data-aos="fade-up" attributes in index.html
 // and animates each element into view as you scroll to it.
 AOS.init({
-  duration: 700,
-  once: true, // animate only the first time an element is seen
+  duration: 700, //slow = 1500, fast=300, default=700
+  once: true, // animate only the first time an element is seen here i can change the speed of animation speed
 });
 
 // ---------- 2. Dark / Light theme toggle ----------
 const themeToggle = document.getElementById("themeToggle");
 const body = document.body;
-
+// by adding !locastoage.getitem("flowpilot-theme") 
 // Load saved theme (if the user picked one on a previous visit)
 if (localStorage.getItem("flowpilot-theme") === "dark") {
   body.classList.add("dark");
@@ -47,13 +47,10 @@ navLinks.querySelectorAll("a").forEach((link) => {
 // ---------- 3. EmailJS contact form ----------
 // Sign up free at https://www.emailjs.com, create a service + template,
 // then replace the 3 placeholders below with your own IDs.
-// Your EmailJS template must use {{name}}, {{email}}, {{message}} as the
-// variable placeholders — these match the <input name="..."> attributes
-// on the form below, which is how EmailJS knows what to fill in.
-// (Until you add real keys, the form just shows a friendly demo message.)
-const EMAILJS_PUBLIC_KEY = "glf-sNc5MJukSrwrN";
-const EMAILJS_SERVICE_ID = "service_g82qyj9";
-const EMAILJS_TEMPLATE_ID = "template_d9zdesf";
+// (Until you do, the form just shows a friendly demo message.)
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 
 if (window.emailjs) {
   emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -73,12 +70,12 @@ contactForm.addEventListener("submit", (e) => {
     return;
   }
 
-  const nameValue = document.getElementById("name").value.trim();
+  const nameValue = waitlistForm.user_name.value.trim();
 
   if (nameValue.length < 2) {
-    formStatus.textContent = "Please enter your full name.";
-    return;
-  }
+  waitlistStatus.textContent = 'Please enter your full name.';
+  return;  
+}
 
   formStatus.textContent = "Sending...";
 
@@ -88,6 +85,12 @@ contactForm.addEventListener("submit", (e) => {
       formStatus.textContent = "Message sent! We'll get back to you soon.";
       contactForm.reset();
     })
+    .then(() => {
+    const count = Number(localStorage.getItem('waitlist-count') || 0) + 1;
+    localStorage.setItem('waitlist-count', count);
+    waitlistStatus.textContent = `You're on the list! (${count} people joined from this browser)`;
+    waitlistForm.reset();
+   })
     .catch((err) => {
       formStatus.textContent = "Something went wrong. Please try again.";
       console.error(err);
