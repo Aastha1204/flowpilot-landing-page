@@ -463,7 +463,7 @@ section {
   .price-card.featured { transform: none; }
   .contact-inner { flex-direction: column; }
 }
-
+/* here i can change the structure of how the elements are arranged on smaller screens */
 @media (max-width: 700px) {
   .nav-links {
     position: absolute;
