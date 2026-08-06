@@ -10,7 +10,7 @@
 // AOS reads the data-aos="fade-up" attributes in index.html
 // and animates each element into view as you scroll to it.
 AOS.init({
-  duration: 700,
+  duration: 700,   // here you can change the duration of animation fast= 300, slow=1000, default=700
   once: true, // animate only the first time an element is seen
 });
 
@@ -19,7 +19,7 @@ const themeToggle = document.getElementById("themeToggle");
 const body = document.body;
 
 // Load saved theme (if the user picked one on a previous visit)
-if (localStorage.getItem("flowpilot-theme") === "dark") {
+if (localStorage.getItem("flowpilot-theme") === "dark") {   // here you can edit the default theme to dark if you want by adding !localStorage.getItem("flowpilot-theme") or changing the condition to "light" instead of "dark"  after dark 
   body.classList.add("dark");
   themeToggle.textContent = "☀️";
 }
